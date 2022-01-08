@@ -3,6 +3,7 @@
 package Array;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class FindAllNumbersThatDisappeared {
@@ -11,11 +12,12 @@ public class FindAllNumbersThatDisappeared {
 
         //Approach1: Use to for loops to find the missing numbers.
         //Hint: Use the given constraint; [1,n]
-        for(int element=1; element<=ar.length; element++){
-            int j=0;
-            while(j<ar.length && element!=ar[j]) j++;
-            if(j==ar.length) result.add(element);
-        }
+        //T.C O(n2) S.C O(1)
+//        for(int element=1; element<=ar.length; element++){
+//            int j=0;
+//            while(j<ar.length && element!=ar[j]) j++;
+//            if(j==ar.length) result.add(element);
+//        }
 
         //Approach2: Use a helper array to find which numbers are missing.
         //T.C O(n) S.C O(n)
@@ -28,6 +30,25 @@ public class FindAllNumbersThatDisappeared {
 //        for(int i=1; i<helperAr.length; i++){//index started from 0 as we want elements from 1 to size of array
 //            if(helperAr[i]==0) result.add(i);
 //        }
+
+        //Approach3: Playing with indices and elements.
+        //T.C O(n) S.C O(1)
+        int n=ar.length;//for convenience
+
+        //now iterating over each element and modifying the elements
+        for(int i=0; i<n; i++){
+            int element=--ar[i];//Making the elements in range of [0, n-1] in single loop itself.
+            if(element<n) ar[element] += n;
+            else {
+                element %= n;
+                ar[element] += n;
+            }
+        }
+
+        //collect all those elements which are less than n, which are nothing but missing elements.
+        for(int i=0; i<n; i++){
+            if(ar[i] < n) result.add(i+1);//i+1 because in the first loop we've decreased the magnitude by 1.
+        }
 
         return result;
     }
