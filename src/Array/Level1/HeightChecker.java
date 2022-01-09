@@ -4,9 +4,7 @@
 
 //Return the number of indices where heights[i] != expected[i].
 
-package Array;
-
-import java.util.Arrays;
+package Array.Level1;
 
 public class HeightChecker {
     public static int heightChecker(int[] ar) {

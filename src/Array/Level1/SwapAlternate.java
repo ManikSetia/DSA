@@ -1,7 +1,7 @@
 //ip = {1,2,3,4,5,6}
 //op = {2,1,4,3,6,5}
 
-package Array;
+package Array.Level1;
 
 import java.util.Arrays;
 

@@ -1,9 +1,6 @@
 //Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.
 
-package Array;
-
-import java.util.HashMap;
-import java.util.Map;
+package Array.Level1;
 
 public class FindUnique {
     private static boolean checkMultipleOccurrence(int[] ar, int index, int uniqueElement){

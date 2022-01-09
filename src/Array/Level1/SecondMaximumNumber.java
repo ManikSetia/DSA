@@ -1,4 +1,4 @@
-package Array;
+package Array.Level1;
 
 public class SecondMaximumNumber {
 

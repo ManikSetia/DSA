@@ -1,9 +1,8 @@
 //Given an array nums of n integers where nums[i] is in the range [1, n], return an array of all the integers in the range [1, n] that do not appear in nums.
 
-package Array;
+package Array.Level1;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class FindAllNumbersThatDisappeared {

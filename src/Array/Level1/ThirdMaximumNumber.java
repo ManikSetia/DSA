@@ -1,6 +1,6 @@
 //Given an integer array nums, return the third distinct maximum number in this array. If the third maximum does not exist, return the maximum number.
 
-package Array;
+package Array.Level1;
 
 public class ThirdMaximumNumber {
     //T.C. O(n)
