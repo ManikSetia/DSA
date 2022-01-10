@@ -9,7 +9,7 @@ public class FindAllNumbersThatDisappeared {
     private static List<Integer> findDisappearedNumbers(int[] ar){
         List<Integer> result=new ArrayList<>();
 
-        //Approach1: Use to for loops to find the missing numbers.
+        //Approach1: Use two for loops to find the missing numbers.
         //Hint: Use the given constraint; [1,n]
         //T.C O(n2) S.C O(1)
 //        for(int element=1; element<=ar.length; element++){

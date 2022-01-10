@@ -17,19 +17,27 @@ public class FindAllDuplicates {
 
         //Approach2: HashMap to count the occurrence of each element.
         //T.C O(n) S.C O(n)
-        Map<Integer, Integer> map=new HashMap<>();
-        for(int ele: ar){
-            map.put(ele, map.getOrDefault(ele, 0)+1);
-        }
+//        Map<Integer, Integer> map=new HashMap<>();
+//        for(int ele: ar){
+//            map.put(ele, map.getOrDefault(ele, 0)+1);
+//        }
+//
+//        for(Map.Entry<Integer, Integer> entry: map.entrySet()){
+//            if(entry.getValue()==2) duplicates.add(entry.getKey());
+//        }
 
-        for(Map.Entry<Integer, Integer> entry: map.entrySet()){
-            if(entry.getValue()==2) duplicates.add(entry.getKey());
+        //Approach3: Negative Marking.
+        //T.C (n) S.C O(1)
+        for(int i=0; i<ar.length; i++){
+            int index=Math.abs(ar[i])-1;//-1 so that index lies between 0 and n
+            if(ar[index]<0) duplicates.add(index+1);//+1 because we subtracted 1 in the previous step
+            else ar[index]=-ar[index];
         }
         return duplicates;
     }
     public static void main(String[] args) {
-//        int[] ar={4,3,2,7,8,2,3,1};
-        int[] ar={1,1,2};
+        int[] ar={4,3,2,7,8,2,3,1};
+//        int[] ar={1,1,2};
 //        int[] ar={1};
         List<Integer> duplicateElements=findDuplicates(ar);
         System.out.println("List of duplicate elements: "+duplicateElements);
