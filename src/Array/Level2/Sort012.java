@@ -12,7 +12,7 @@ public class Sort012 {
         //T.C (nlogn) S.C O(1)
 //        Arrays.sort(ar);
 
-        //Approach2: Couting sort
+        //Approach2: Counting sort
         //T.C O(2n) S.C O(1)
 //         int count0=0, count1=0, count2=0;
 //
