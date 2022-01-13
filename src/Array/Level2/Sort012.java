@@ -10,7 +10,23 @@ public class Sort012 {
 
         //Approach1: Sorting
         //T.C (nlogn) S.C O(1)
-        Arrays.sort(ar);
+//        Arrays.sort(ar);
+
+        //Approach2: Couting sort
+        //T.C O(2n) S.C O(1)
+         int count0=0, count1=0, count2=0;
+
+         for(int ele: ar){
+             if(ele==0) count0++;
+             else if(ele==1) count1++;
+             else count2++;
+         }
+
+         for(int i=0; i<count0; i++) ar[i]=0;
+
+         for(int i=count0; i<count0+count1; i++) ar[i]=1;
+
+         for(int i=count0+count1; i<ar.length; i++) ar[i]=2;
 
         System.out.println(Arrays.toString(ar));
     }
