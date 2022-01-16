@@ -15,7 +15,6 @@ public class BookAllocation {
             int barrier=low+(high-low)/2;//mid is barrier
 
             if(isPossible(ar, barrier, students)){
-                System.out.println("result: "+result);
                 result=barrier;
                 high=barrier-1;
             }
