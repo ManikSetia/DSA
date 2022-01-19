@@ -56,7 +56,8 @@ public class FindTheDuplicateNumber {
         return duplicateNumber;
     }
     public static void main(String[] args) {
-        int[] ar={1,3,4,2,2};
+//        int[] ar={1,3,4,2,2};
+        int[] ar={2,2};
 //        int[] ar={3,1,3,4,2};
         int duplicateNumber=findDuplicate(ar);
         System.out.println("Duplicate number is: "+duplicateNumber);

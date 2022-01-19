@@ -4,6 +4,8 @@
 package Array.Level2;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Sort012 {
     private static void sortColors(int[] ar){
@@ -36,7 +38,6 @@ public class Sort012 {
             else if(ar[mid]==1) mid++;
             else swap(ar, mid, high--);
         }
-
         System.out.println(Arrays.toString(ar));
     }
     private static void swap(int[] ar, int i, int j){
